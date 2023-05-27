@@ -1,0 +1,33 @@
+export const RequestNodes = `
+            [out:json];
+    (
+      way
+        ["highway"="footway"]
+        ["surface"="asphalt"]
+        (around:50,55.168582,61.352022);
+      way
+        ["highway"="footway"]
+        ["surface"="paving_stones"]
+        (around:50,55.168582,61.352022);
+      way
+        ["highway"="footway"]
+        (around:50,55.168582,61.352022);
+      way
+        ["bicycle"="yes"]
+        (around:50,55.168582,61.352022);
+      way
+        ["highway"="brideway "]
+        (around:50,55.168582,61.352022);
+      way
+        ["highway"="service"]
+        (around:50,55.168582,61.352022);
+      ._;
+      node(w);
+      node(r)->.nodes;
+      way(r);
+    );
+    (
+      ._;
+      >;
+    );
+    out;`;
